@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User's Profile</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='profileStyle.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="profilePicture">
+
+        </div>
+        <div class="title">
+            <h1>Welcome,{{ session.firstname }}</h1>
+        </div>
+        <div class="logout">
+        <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </header>
+    <div class="navbar">
+        <ul>
+            <li class="active"> <a href="/profile"> Overview</a></li>
+            <li> <a href="/drivingmode"> Driving Mode</a></li>
+            <li> <a href="/editprofile"> Edit Profile</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="container">
+
+        <div class="driverdetails">
+
+
+
+            <h1>---------Driver Details---------</h1>
+            <div style="display:flex;"><div class="data"><label>Username : </label></div> <div>{{ session.username }}</div></div>
+            <div style="display:flex;"><div class="data"><label>Full-Name : </label></div>    <div>{{ session.name }}</div></div>
+            <div style="display:flex;"><div class="data"><label>Age: </label></div>    <div>{% if data %} <div>{{ data[0][2] }}</div> {% else %} Not Set {% endif %}</div></div>
+            <div style="display:flex;"><div class="data"><label>License Number : </label></div>    <div>{% if data %}{{ data[0][3] }}{% else %}Not Set {% endif %}</div></div>
+            <div style="display:flex;"><div class="data"><label>Gender : </label></div>    <div>{% if data %}{{ data[0][4] }}{% else %}Not Set {% endif %}</div>
+
+        </div>
+        <div class="car-details">
+
+            <h1>---------Vehicle Details---------</h1>
+
+                <div style="display:flex;"><div class="data"><label>Vehicle Number : </label></div> <div>{% if data %}{{ data[0][5] }}{% else %}Not Set {% endif %}</div></div>
+                <div style="display:flex;"><div class="data"><label>Vehicle Type : </label></div>    <div>{% if data %}{{ data[0][6] }}{% else %}Not Set {% endif %}</div></div>
+                <div style="display:flex;"><div class="data"><label>Vehicle Name : </label></div>    <div>{% if data %}{{ data[0][7] }}{% else %}Not Set {% endif %}</div></div>
+                <div style="display:flex;"><div class="data"><label>Manufacturing Company : </label></div>    <div>{% if data %}{{ data[0][8] }}{% else %}Not Set {% endif %}</div></div>
+                <div style="display:flex;"><div class="data"><label>Buy Date : </label></div>    <div>{% if data %}{{ data[0][9] }}{% else %}Not Set {% endif %}</div></div>
+        </div>
+    </div>
+</body>
+</html>

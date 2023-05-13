@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='profileStyle.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="profilePicture">
+
+        </div>
+        <div class="title">
+            <h1>Welcome,{{ session.firstname }}</h1>
+        </div>
+        <div class="logout">
+        <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </header>
+    <div class="navbar">
+        <ul>
+            <li> <a href="/profile"> Overview</a></li>
+            <li> <a href="/drivingmode"> Driving Mode</a></li>
+            <li class="active"> <a href="/editprofile"> Edit Profile</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="container">
+        <form action="{{ url_for('editprofile') }}" method="post">
+
+        <div class="driverdetails">
+
+
+
+            <h1>---------Driver Details---------</h1>
+            <div style="display:flex;"><div class="data"><label>Username : </label></div> <div>{{ session.username }}</div></div>
+            <div style="display:flex;"><div class="data"><label>Full-Name : </label></div>    <div>{{ session.name }}</div></div>
+            <div style="display:flex;"><div class="data"><label>Age: </label></div>    <div><input type="text" name="age"></div></div>
+            <div style="display:flex;"><div class="data"><label>License Number : </label></div>    <div><input type="text" name="licenseNumber"></div></div>
+            <div style="display:flex;"><div class="data"><label>Gender : </label></div>    <div><input type="text" name="gender"></div>
+
+        </div>
+        <div class="car-details">
+
+            <h1>---------Vehicle Details---------</h1>
+
+                <div style="display:flex;"><div class="data"><label>Vehicle Number : </label></div> <div><input type="text" name="vehicleNumber"></div></div>
+                <div style="display:flex;"><div class="data"><label>Vehicle Type : </label></div>    <div><input type="text" name="vehicleType"></div></div>
+                <div style="display:flex;"><div class="data"><label>Vehicle Name : </label></div>    <div><input type="text" name="vehicleName"></div></div>
+                <div style="display:flex;"><div class="data"><label>Manufacturing Company : </label></div>    <div><input type="text" name="company"></div></div>
+                <div style="display:flex;"><div class="data"><label>Buy Date : </label></div>    <div><input type="date" name="buyDate"></div></div>
+        </div>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+        </form>
+    </div>
+    </div>
+</body>
+</html>

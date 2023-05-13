@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Driver's Registration</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='loginStyle.css') }}">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="card">
+            <form action="{{ url_for('register') }}" method="post">
+                Enter UserName: <input type="text" name="username">
+                Enter First Name: <input type="text" name="fname">
+                Enter Last Name: <input type="text" name="lname">
+                Enter Email : <input type="email" name="email">
+                Create Password: <input type="password" name="password">
+                Confirm Password: <input type="password" name="confirmPass">
+                <input type="submit" value="register">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

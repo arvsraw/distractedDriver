@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving Mode</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='profileStyle.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="profilePicture">
+
+        </div>
+        <div class="title">
+            <h1>Welcome,{{ session.firstname }}</h1>
+        </div>
+        <div class="logout">
+        <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </header>
+    <div class="navbar">
+        <ul>
+            <li> <a href="/profile"> Overview</a></li>
+            <li class="active"> <a href="/drivingmode"> Driving Mode</a></li>
+            <li> <a href="/editprofile"> Edit Profile</a></li>
+        </ul>
+    </div>
+    <div class="content">
+       
+        <div class="inputForm">
+            <h1>Select a file to upload.</h1>
+            <p>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% endwith %}
+            </p>
+            <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" required><br>
+                <button type="Submit">Submit</button>
+            </form>
+        </div>
+        
+        <h1>output:</h1>
+
+        <div class="output">
+            <p><h2></h2>{{ res }}</h2></p>
+        </div>
+
+    </div>
+    
+</body>
+</html>

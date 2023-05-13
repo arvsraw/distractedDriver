@@ -1,0 +1,197 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Kanit', sans-serif;
+    background:url('/static/images/LoginBackground.jpg')
+}
+
+header{
+    display:flex;
+    height:30vh;
+    width:90%;
+    background-color:#8080809c;;
+    margin-top:1vh;
+    border-top-right-radius: 3vw;
+    border-bottom-right-radius:3vw;
+}
+
+header .profilePicture{
+    background-image: url(/static/images/user.png);
+    background-size: cover;
+    background-position: center;
+    height: 27vh;
+    width: 12vw;
+    margin-top: 2vh;
+    margin-left: 3vw;
+}
+
+header .title{
+    font-size: 1.5em;
+    height: 10vh;
+    margin-top: 9vh;
+    margin-left: 2vw;
+}
+
+.logout{
+    width: 7vw;
+    height: 3vh;
+    text-align: center;
+    margin-left: 40vw;
+    margin-top: 23vh;
+    background-color: black;
+}
+
+.logout a{
+    text-decoration:none;
+    color:white;
+}
+
+.navbar{    
+    height: 4vh;
+    width: 50%;
+    background-color: blue;
+
+}
+
+.navbar ul{   
+    display: flex;
+    list-style: none;
+    color: white;
+    font-size: 1.4em;
+}
+
+.navbar ul li{
+    text-align: center;
+    cursor: pointer;
+    width: 10vw;
+    transition-property: background-color;
+    transition-duration: 1s;
+    height: 4vh;
+}
+
+.navbar ul li a{
+    text-decoration:none;
+    color:white;
+}
+
+.navbar ul li:hover{
+    background-color: black;
+}
+
+.content{
+    margin-left: 1vh;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    height: 145vh;
+    width: 98%;
+    border: 2px solid grey;
+    background-color: #80808087;
+    border-radius: 3vh;
+}
+
+.container{
+    height: 50vh;
+}
+
+.container button{
+    font-size: 18px;
+    margin-top: 3vh;
+    margin-left: 3vw;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border-radius: 7px;
+    height: 7vh;
+    width: 12vw;
+}
+
+.container button:hover{
+    transform: scale(1.3);
+}
+
+.container input{
+
+}
+
+.driverdetails{
+    text-align:center;
+    border: 2px solid black;
+    height: 42vh;
+    margin-top: 5vh;
+    width: 98%;
+    margin-left: 1vw;
+    border-radius: 4vh;
+    background-color: #120f0f;
+    color:white;
+}
+
+.car-details{
+    text-align:center;
+    border: 2px solid black;
+    height: 42vh;
+    margin-top: 7vh;
+    width: 98%;
+    margin-left: 1vw;
+    border-radius: 4vh;
+    background-color: #120f0f;
+    color:white;
+}
+
+.active{
+    background-color:black;
+    color:white;
+}
+
+
+.inputForm{
+
+    padding-left: 2vw;
+    border-radius: 31px;
+    border: 4px solid black;
+    width: 45vw;
+    margin-left: 4vw;
+    height: 42vh;
+    margin-top: 70px;
+
+}
+
+.inputForm input{
+    border-radius: 30px;
+    height: 4px;
+    width: 29vw;
+    padding: 25px;
+    font-size: 19px;
+}
+
+.inputForm button{
+    margin-top: 6vh;
+    margin-left: 15vw;
+    font-size: 17px;
+}
+
+.output{
+    border: 4px solid black;
+    margin-top: 4vh;
+    width: 42vw;
+    height: 12vh;
+    border-radius: 13px;
+    margin-left: 3.5vw;
+    color: white;
+    font-size: 23px;
+    padding-left: 66px;
+    padding-top: 0px;
+}
+
+.data{
+    height: 37px;
+    width: 31vw;
+    font-size: 17px;
+    margin-left: 23vw;
+    margin-bottom: -3px;
+}
+
+.data label{
+
+
+
+}
