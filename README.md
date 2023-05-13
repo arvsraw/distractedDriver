@@ -85,7 +85,6 @@ pip install -r requirements.txt
 ## Credits
 
 This is a team based project created by: - 
-1. Lalit Dungriyal
-2. Himanshu Pal
-3. Amit Gussain
-4. Arvind Rawat
+1. Arvind Rawat
+2. Amit Gusai
+3. Lalit
